@@ -8,12 +8,12 @@ class MyHomePage extends StatefulWidget {
     child: Text('Menu'),
   );
 
+  final bodyContainer = BodyContainer();
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final bodyContainer = BodyContainer();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       drawer: widget.drawer,
-      body: bodyContainer,
+      body: widget.bodyContainer,
     );
   }
 }
